@@ -1,0 +1,24 @@
+//width/height
+.full-width{width:100%}
+.full-height{height: 100%}
+//display
+.dib {display: inline-block}
+//links
+a {display: inline-block;text-decoration: none}
+//position
+.pos-r {position: relative}
+.pos-a {position: absolute}
+//flex
+.flex {display: flex}
+.align-items-center{align-items: center}
+.justify-center {justify-content: center}
+.justify-end {justify-content: flex-end}
+
+//headers
+h1,.h1 {font-size: calc(3.5vh + 6vw);line-height: calc(2.5vh + 5.5vw);font-weight: 600}
+h2,.h2{font-size: calc(2.5vh + 5vw);
+  line-height: calc(2vh + 5vw);font-weight:600}
+
+//layout
+.container {width:90%}
+
