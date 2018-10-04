@@ -1,11 +1,11 @@
 <template>
   <header class="pos-a full-width" :class="{ active: isActive }" >
     <nav class="flex align-items-center">
-      <div class="logo"><img src="~/assets/images/logo/logo-sm-4.svg" alt=""></div>
+      <a href="/" class="logo"><img src="~/assets/images/logo/logo-sm-4.svg" alt=""></a>
       <div class="links flex align-items-center">
         <ul class="full-width dib">
           <li class="dib"><a href="">About</a></li>
-          <li class="dib"><a href="">Members</a></li>
+          <li class="dib"><nuxt-link to="/members" >Members</nuxt-link></li>
           <li class="dib"><a href="">Media</a></li>
           <li class="dib"><a href="">Contact</a></li>
           

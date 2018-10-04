@@ -2,7 +2,8 @@
   <div id="main">
     <section-hero />
     <section-about />
-    <section-members />
+    <!-- <slider /> -->
+   <section-members />
    
   </div>
 </template>
@@ -11,12 +12,16 @@
 import SectionHero from '~/components/SectionHero.vue'
 import SectionAbout from '~/components/SectionAbout.vue'
 import SectionMembers from '~/components/SectionMembers'
+// import SectionMembersTwo from '~/components/SectionMembersTWO'
+//import Slider from '~/components/Slider'
 
 export default {
   components: {
     SectionHero,
     SectionAbout,
-    SectionMembers,
+    SectionMembers
+    //Slider
+    //SectionMembersTwo,
   }
 }
 </script>

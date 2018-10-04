@@ -5,7 +5,7 @@
       <div class="crew-wrap pos-r">
         <div class="grid flex ">
          <div class="member-wrap" v-for="member in members" :key="member.name">
-            <a class="member db">
+            <a class="member db" @click='testClick(member)'>
               <p class="pos-a">{{member.name}}</p>
             </a>
          </div>
@@ -13,24 +13,27 @@
       </div>
     </div>
   </section>
+  
 </template>
 <script>
+import members from '~/assets/js/members.json'
 export default { 
   name: 'section-members',
   data() {
     return {
-      members: [
-         {name:'O.G.Stress',image:'',},
-         {name:'StressTheAlmighty',image:'',},
-         {name:'OldManStress',image:'',},
-         {name:'Stress',image:'',},
-        {name:'O.G.Stress',image:'',},
-         {name:'StressTheAlmighty',image:'',},
-         {name:'OldManStress',image:'',},
-         {name:'Stress',image:'',},
-      ]
+      members,
+      modal: {
+        name: '',
+        image: ''
+      },
+      test: 'flflflflf'
     }
   },
+  methods: {
+    testClick: function (el){
+      this.test = el
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

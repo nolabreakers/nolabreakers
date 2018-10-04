@@ -1,19 +1,21 @@
 <template>
   <div>
+    <nola-nav-two />
     <nuxt/>
-   
+    
   </div>
 </template>
 <script>
-import NolaNav from '~/components/NolaNav.vue'
+import NolaNavTwo from '~/components/NolaNavTwo.vue'
 export default {
+
   components: {
-    NolaNav,
+    NolaNavTwo,
   }
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 
 </style>
 
