@@ -1,39 +1,44 @@
 <template>
-  <section class="members flex justify-center align-items-center pos-r">
+  <section class="members flex justify-center align-items-center pos-r overflow-hidden">
     <div class="container">
       <h2 >Members</h2>
-      <div class="crew-wrap pos-r">
-        <div class="grid flex ">
-         <div class="member-wrap" v-for="member in members" :key="member.name">
-            <a class="member db" @click='testClick(member)'>
-              <p class="pos-a">{{member.name}}</p>
+        <div class="row">
+         <nuxt-link tag="div" :to="{name: 'members', params: {member} }" class="member-wrap col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center"  v-for="member in members" :key="member.name">
+            <a class="member dib overflow-hidden text-center pos-r" >
+              <img :src="member.image.sm" alt="" class="full-width height-auto">
+              <span class="name pos-a text-white">{{member.name}}</span>
+              <div class="bio pos-a full-width full-height flex">
+                <div class="bio-content">
+                  <h4>{{member.name}}</h4>
+                  <p>{{member.bio | excerpt}}</p>
+                  <a  class="btn read-more">Read More</a>
+                </div>
+              </div>
             </a>
-         </div>
+         </nuxt-link>
         </div>
+      <div class="text-center">
+        <nuxt-link to="/members" class="btn">View All Members</nuxt-link>
       </div>
     </div>
   </section>
   
 </template>
 <script>
-import members from '~/assets/js/members.json'
+import {members} from '~/assets/js/members.js'
 export default { 
-  name: 'section-members',
   data() {
     return {
-      members,
-      modal: {
-        name: '',
-        image: ''
-      },
-      test: 'flflflflf'
+      members: members.sort(function (a, b) {return Math.random() - 0.5;}).slice(0,8),
     }
   },
-  methods: {
-    testClick: function (el){
-      this.test = el
+  filters: {
+    excerpt: function(val){
+      if(!val) return
+      let str = val.replace(/<(?:.|\n)*?>/gm, '')
+      return str.substring(0,150) + '...'
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -41,7 +46,6 @@ export default {
     background:black;
     color:white;
     min-height:50vh;
-    overflow: hidden;
     .container {
       padding:8vh 0;
      
@@ -49,46 +53,93 @@ export default {
        margin:4vh 0 8vh;
        text-align: center;
       }
-      .grid {
- 
-        
-        flex-wrap: wrap;
-        .member-wrap{
-          min-height: 40vh;
-          height: calc(40vh + 4vw);
-          position: relative;
-          width: 25%;
-          .member {
-            width: calc(100% - 1.5rem);
-            height: calc(100% - 1.5rem);
+      .member-wrap{
+        margin-bottom:1rem;
+        .member {
+          line-height: 0;
+          filter: grayscale(1);
+          transition: .3s ease;
+          .name{
+            letter-spacing: -30px;
+            left: -10px;
             position: absolute;
-            left: calc(1.5rem / 2);
-            border:1px solid #fff;
-            background-image: url('https://i.pinimg.com/originals/0e/0b/84/0e0b847e626366a585e95290d5c4ae82.jpg');
-            background-size: cover;
-            background-position: bottom center;
-            overflow: hidden;
-            filter: grayscale(1);
-            transition: .3s ease;
-          
-            &:hover {
-              filter: grayscale(0);
-            }
-            p { 
-              bottom:0;
-              left:0;
-              width:100%;
-              font-size: calc(3.5vh + 3.5vw);
-              font-weight: 900;
-              font-family: $font-2;
-              letter-spacing: -25px;
-              color:rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.44);
+            bottom: 50px;
+            font-size: calc(8vh + 9vw);
+          }
+            
+          .bio {
+            top: 14%;
+            top: 0;
+            left: 0;
+            line-height: 1.5;
+            background: white;
+            padding: 5%;
+            opacity:0;
+            transition: .5s ease;
+            color:black;
+            align-items: center;
+            padding: 1rem;
+            &:before {
+              content: '';
+              width: 100%;
+              height: 100%;
+              border: 3px solid white;
+              top: -2.5px;
+              left: -2.8px;
+              position: absolute;
+              transition: .5s ease;
+              transform: scale(1.5);
               
             }
+            h4 {
+              font-size:2rem;
+              margin-bottom:1rem;
+            }
+            p {
+              text-align: left;
+            }
+            .btn {
+              color:black;
+              border-color:black;
+              margin-top:0;
+            }
+          }
+           &:hover {
+              filter: grayscale(0);
+              .bio {
+                opacity:0.9;
+                transform: scale(.9);
+                &:before{
+                  transform: scale(1.05);
+                }
+              }
+            }
+        }
+        @media screen and (max-width:1200px){
+          &:nth-child(7),
+          &:nth-child(8){
+            display: none;
+          }
+        }
+        @media screen and (max-width:1024px){
+          &:nth-child(5),
+          &:nth-child(6){
+            display: none;
+          }
+        }
+        @media screen and (max-width:767px){
+          &:nth-child(4) {
+            display: none;
           }
         }
       }
-
+ 
+      .btn {
+        color:white;
+        border:1px solid white;
+        margin-top:2rem;
+      }
     }
   }
 </style>

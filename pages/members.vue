@@ -38,6 +38,7 @@ export default {
       members: members.sort(function (a, b) {return Math.random() - 0.5;}),
       modal: {},
       showModal: false,
+      userId:''
     }
   },
   methods:{
@@ -51,6 +52,11 @@ export default {
       if(!val) return
       let str = val.replace(/<(?:.|\n)*?>/gm, '')
       return str.substring(0,800) + '...'
+    }
+  },
+  created(){
+    if(this.$route.params.member) {
+      this.openModal(this.$route.params.member)
     }
   }
 }
