@@ -1,5 +1,5 @@
 <template>
-  <section class="about shadowed pos-r flex justify-center align-items-center">
+  <section id="about" class="about shadowed pos-r flex justify-center align-items-center">
     <div class="container">
       <div class="text-wrap  pos-r">
         <h2>About</h2>
