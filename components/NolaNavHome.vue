@@ -1,5 +1,5 @@
 <template>
-  <header class="pos-a full-width" :class="{ active: isActive }" >
+  <header class="full-width pos-a" :class="{ active: isActive }" >
     <div class="container">
       <nav class="">
         <div class="logo-wrap dib">
@@ -8,7 +8,8 @@
         <div class="links dib">
           <ul class="dib">
             <li class="dib" v-for="link in navLinks" :key="link.name">
-              <nuxt-link class="db" :to="link.to">{{link.name}}</nuxt-link>
+             <a v-if="link.name == 'About'" href="/#about" v-scroll-to="`${link.to}`">{{link.name}}</a>
+              <nuxt-link v-else class="db" :to="link.to">{{link.name}}</nuxt-link>
             </li>
           </ul>
         </div>
@@ -18,13 +19,12 @@
 </template>
 <script>
 export default {
-  name: 'nola-nav-two',
-  
+  name: 'nola-nav',
   data() {
     return {
       isActive: false,
       navLinks: [
-        {name:'About',to:'/#about'},
+        {name:'About',to:'#about'},
         {name:'Members',to:'/members'},
         {name:'Media',to:'/media'},
         {name:'Contact',to:'/#contact'},
@@ -53,8 +53,9 @@ export default {
    nav {
      justify-content: space-around;
      .logo-wrap {
+       padding-top:10px;
        width:19%;
-       vertical-align: middle;
+       
        img{
         max-width:80px;
        }
@@ -62,13 +63,14 @@ export default {
      .links {
        width: 80%;
       text-align: right;
+      vertical-align: top;
       ul{
         li {
           text-align: center;
           a {
            line-height: 45px;
            color:white;
-           padding: 0 25%;
+           padding: 0 1.3vw;
            text-shadow:1px 1px 1px #000;
            font-family: $font-3;
            font-weight: 100;

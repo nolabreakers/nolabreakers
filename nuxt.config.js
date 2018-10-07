@@ -24,7 +24,8 @@ module.exports = {
     '@/assets/sass/main.scss'
   ],
   plugins: [
-    { src: '~/plugins/youtube.js', ssr: false }
+    { src: '~/plugins/youtube.js', ssr: false },
+    { src: '~/plugins/vue-scrollto.js', ssr: false }
   ],
   /*
   ** Customize the progress bar color

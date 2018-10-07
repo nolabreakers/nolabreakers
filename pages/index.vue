@@ -12,7 +12,6 @@ import SectionHero from '~/components/SectionHero.vue'
 import SectionAbout from '~/components/SectionAbout.vue'
 import SectionMembers from '~/components/SectionMembers'
 import SectionMedia from '~/components/SectionMedia'
-//import Slider from '~/components/Slider'
 
 export default {
   head(){

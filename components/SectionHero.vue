@@ -1,6 +1,5 @@
 <template>
   <div class="section hgroup pos-r flex align-items-center">
-    <nola-nav-two/>
     <div class="container pos-r">
       <h1><span>NoLa</span> <br> Breakers</h1>
       <p class="tagline">Some tag line thats cool...</p>
@@ -9,13 +8,8 @@
   </div>
 </template>
 <script>
-import NolaNavTwo from '~/components/NolaNavTwo.vue'
-
 export default {
   name: 'section-hero',
-  components: {
-    NolaNavTwo,
-  }
 }
 </script>
 <style lang="scss" scoped>
