@@ -4,21 +4,21 @@
       <h2 >Members</h2>
         <div class="row">
          <nuxt-link tag="div" :to="{name: 'members', params: {member} }" class="member-wrap col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center"  v-for="member in members" :key="member.name">
-            <a class="member dib overflow-hidden text-center pos-r" >
+            <div class="member dib overflow-hidden text-center pos-r" >
               <img :src="member.image.sm" alt="" class="full-width height-auto">
               <span class="name pos-a text-white">{{member.name}}</span>
               <div class="bio pos-a full-width full-height flex">
                 <div class="bio-content">
                   <h4>{{member.name}}</h4>
                   <p>{{member.bio | excerpt}}</p>
-                  <a  class="btn read-more">Read More</a>
+                  <span class="btn dib read-more">Read More</span>
                 </div>
               </div>
-            </a>
+            </div>
          </nuxt-link>
         </div>
       <div class="text-center">
-        <nuxt-link to="/members" class="btn">View All Members</nuxt-link>
+        <nuxt-link to="/members" class="btn dib">View All Members</nuxt-link>
       </div>
     </div>
   </section>
@@ -46,8 +46,9 @@ export default {
     background:black;
     color:white;
     min-height:50vh;
+    padding:8vh 0;
     .container {
-      padding:8vh 0;
+      
      
       h2 {
        margin:4vh 0 8vh;
@@ -102,7 +103,7 @@ export default {
             .btn {
               color:black;
               border-color:black;
-              margin-top:0;
+              margin-top:1rem;
             }
           }
            &:hover {
@@ -138,7 +139,7 @@ export default {
       .btn {
         color:white;
         border:1px solid white;
-        margin-top:2rem;
+        margin-top:3rem;
       }
     }
   }

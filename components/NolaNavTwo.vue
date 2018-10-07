@@ -1,55 +1,67 @@
 <template>
   <header class="pos-a full-width" :class="{ active: isActive }" >
-    <nav class="flex align-items-center">
-      <a href="/" class="logo"><img src="~/assets/images/logo/logo-sm-4.svg" alt=""></a>
-      <div class="links flex align-items-center">
-        <ul class="full-width dib">
-          <li class="dib"><a href="">About</a></li>
-          <li class="dib"><nuxt-link to="/members" >Members</nuxt-link></li>
-          <li class="dib"><a href="">Media</a></li>
-          <li class="dib"><a href="">Contact</a></li>
-          
-        </ul>
-      </div>
-    </nav>
+    <div class="container">
+      <nav class="">
+        <div class="logo-wrap dib">
+          <nuxt-link to="/" class="logo dib"><img src="~/assets/images/logo/logo-sm-4.svg" alt="" class="full-width height-auto"></nuxt-link>
+        </div>
+        <div class="links dib">
+          <ul class="dib">
+            <li class="dib" v-for="link in navLinks" :key="link.name">
+              <nuxt-link class="db" :to="link.to">{{link.name}}</nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 </template>
 <script>
 export default {
   name: 'nola-nav-two',
+  
   data() {
     return {
       isActive: false,
+      navLinks: [
+        {name:'About',to:'/#about'},
+        {name:'Members',to:'/members'},
+        {name:'Media',to:'/media'},
+        {name:'Contact',to:'/#contact'},
+      ],
+      urlHash: ''
     }
   },
   methods: {
     menu(){
       this.isActive = !this.isActive
+    },
+    getHash: function(){
+     this.urlHash = window.location.hash || ''
     }
+  },
+  mounted() {
+    this.getHash() 
   }
 }
 </script>
 <style lang="scss" scoped>
  header {
-  padding:0 5%;
   top:0;
   left:0;
   z-index:9;
    nav {
      justify-content: space-around;
-     .logo{
-       color:white;
-       flex:1 1 20%;
+     .logo-wrap {
+       width:19%;
+       vertical-align: middle;
        img{
         max-width:80px;
-        height:auto;
-        padding: 3% 0;
        }
      }
      .links {
-      flex:1 1 80%;
+       width: 80%;
       text-align: right;
-      justify-content: flex-end;
       ul{
         li {
           text-align: center;
@@ -66,8 +78,4 @@ export default {
      }
    }
  }
- 
-  
-  
- 
 </style>
