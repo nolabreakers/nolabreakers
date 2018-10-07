@@ -29,7 +29,13 @@ import {members} from '~/assets/js/members.js'
 export default { 
   data() {
     return {
-      members: members.sort(function (a, b) {return Math.random() - 0.5;}).slice(0,8),
+      members: ''
+    }
+  },
+  methods:{
+    updateMembers(){
+      var people = members.sort(function (a, b) {return Math.random() - 0.5;}).slice(0,8)
+      this.members = people
     }
   },
   filters: {
@@ -39,6 +45,9 @@ export default {
       return str.substring(0,150) + '...'
     }
   },
+  beforeMount(){
+    this.updateMembers()
+  }
 }
 </script>
 <style lang="scss" scoped>
