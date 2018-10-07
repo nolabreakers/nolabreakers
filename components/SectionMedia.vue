@@ -61,7 +61,16 @@ export default {
     stopVideo: function(){
       this.isPlaying = false
      this.player.pauseVideo()
+    },
+    preLoadImgs: function(){
+      this.videos.forEach(video => {
+        (new Image()).src = video.poster
+      });
+      
     }
+  },
+  beforeMount(){
+    this.preLoadImgs()
   }
   
 }
