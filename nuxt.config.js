@@ -1,4 +1,5 @@
 module.exports = {
+  
   /*
   ** Headers of the page
   */
@@ -23,7 +24,7 @@ module.exports = {
     '@/assets/sass/main.scss'
   ],
   plugins: [
-    
+    { src: '~/plugins/youtube.js', ssr: false }
   ],
   /*
   ** Customize the progress bar color
