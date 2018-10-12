@@ -25,7 +25,7 @@
         <div slot="modalContent" class="modal">
           <div class="img-wrap pos-r full-width overflow-hidden">
             <transition name="fade">
-              <img v-show="modal.image && modal.image.modal.lg" :src="modal.image.modal.lg" :key="modalImage" class="full-width">
+              <img v-if="modal.image && modal.image.modal.lg" :src="modal.image.modal.lg" :key="modalImage" class="full-width">
             </transition>
             <h3 v-if="modal.name" class="name pos-a text-white">{{modal.name}}</h3>
           </div>
