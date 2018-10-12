@@ -3,7 +3,11 @@ export let members = [
       "name" : "Anicete",
       "image" : {
         "sm": "/images/members/anicete.jpg",
-        "sm2x" : "/images/members/anicete@2x.jpg"
+        "sm2x" : "/images/members/anicete@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/anicete.jpg",
+          "lg2x" : "/images/modal/anicete@2x.jpg"
+        }
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -15,7 +19,11 @@ export let members = [
       "name" : "Calypso",
       "image" : {         
         "sm": "/images/members/calypso.jpg",         
-        "sm2x" : "/images/members/calypso@2x.jpg"       
+        "sm2x" : "/images/members/calypso@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/calypso.jpg",
+          "lg2x" : "/images/modal/calypso@2x.jpg"
+        }      
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -27,7 +35,11 @@ export let members = [
       "name" : "Cao",
       "image" : {         
         "sm": "/images/members/cao.jpg",         
-        "sm2x" : "/images/members/cao@2x.jpg"       
+        "sm2x" : "/images/members/cao@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/cao.jpg",
+          "lg2x" : "/images/modal/cao@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -39,7 +51,11 @@ export let members = [
       "name" : "Fenrir",
       "image" : {         
         "sm": "/images/members/fenrir.jpg",         
-        "sm2x" : "/images/members/fenrir@2x.jpg"       
+        "sm2x" : "/images/members/fenrir@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/fenrir.jpg",
+          "lg2x" : "/images/modal/fenrir@2x.jpg"
+        }      
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -51,7 +67,11 @@ export let members = [
       "name" : "Goldy",
       "image" : {         
         "sm": "/images/members/goldy.jpg",         
-        "sm2x" : "/images/members/goldy@2x.jpg"       
+        "sm2x" : "/images/members/goldy@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/goldy.jpg",
+          "lg2x" : "/images/modal/goldy@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -63,7 +83,11 @@ export let members = [
       "name" : "Hang",
       "image" : {         
         "sm": "/images/members/hang.jpg",         
-        "sm2x" : "/images/members/hang@2x.jpg"       
+        "sm2x" : "/images/members/hang@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/hang.jpg",
+          "lg2x" : "/images/modal/hang@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -75,7 +99,11 @@ export let members = [
       "name" : "LA Dean",
       "image" : {         
         "sm": "/images/members/la-dean.jpg",         
-        "sm2x" : "/images/members/la-dean@2x.jpg"       
+        "sm2x" : "/images/members/la-dean@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/la-dean.jpg",
+          "lg2x" : "/images/modal/la-dean@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -87,7 +115,11 @@ export let members = [
       "name" : "Metaphor",
       "image" : {         
         "sm": "/images/members/metaphor.jpg",         
-        "sm2x" : "/images/members/metaphor@2x.jpg"       
+        "sm2x" : "/images/members/metaphor@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/metaphor.jpg",
+          "lg2x" : "/images/modal/metaphor@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -99,7 +131,11 @@ export let members = [
       "name" : "Monkey",
       "image" : {         
         "sm": "/images/members/monkey.jpg",         
-        "sm2x" : "/images/members/monkey@2x.jpg"       
+        "sm2x" : "/images/members/monkey@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/monkey.jpg",
+          "lg2x" : "/images/modal/monkey@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -111,7 +147,11 @@ export let members = [
       "name" : "Owl",
       "image" : {         
         "sm": "/images/members/owl.jpg",         
-        "sm2x" : "/images/members/owl@2x.jpg"       
+        "sm2x" : "/images/members/owl@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/owl.jpg",
+          "lg2x" : "/images/modal/owl@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -123,7 +163,11 @@ export let members = [
       "name" : "Pocah",
       "image" : {         
         "sm": "/images/members/pocah.jpg",         
-        "sm2x" : "/images/members/pocah@2x.jpg"       
+        "sm2x" : "/images/members/pocah@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/pocah.jpg",
+          "lg2x" : "/images/modal/pocah@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -135,7 +179,11 @@ export let members = [
       "name" : "RoboSteve",
       "image" : {         
         "sm": "/images/members/robosteve.jpg",         
-        "sm2x" : "/images/members/robosteve@2x.jpg"       
+        "sm2x" : "/images/members/robosteve@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/robosteve.jpg",
+          "lg2x" : "/images/modal/robosteve@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -147,7 +195,11 @@ export let members = [
       "name" : "Sheik",
       "image" : {         
         "sm": "/images/members/sheik.jpg",         
-        "sm2x" : "/images/members/sheik@2x.jpg"       
+        "sm2x" : "/images/members/sheik@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/sheik.jpg",
+          "lg2x" : "/images/modal/sheik@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -159,7 +211,11 @@ export let members = [
       "name" : "Stress T.A.",
       "image" : {         
         "sm": "/images/members/stress.jpg",         
-        "sm2x" : "/images/members/stress@2x.jpg"       
+        "sm2x" : "/images/members/stress@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/stress.jpg",
+          "lg2x" : "/images/modal/stress@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -171,7 +227,11 @@ export let members = [
       "name" : "Sykedelic",
       "image" : {         
         "sm": "/images/members/sykedelic.jpg",         
-        "sm2x" : "/images/members/sykedelic@2x.jpg"       
+        "sm2x" : "/images/members/sykedelic@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/sykedelic.jpg",
+          "lg2x" : "/images/modal/sykedelic@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 
@@ -183,7 +243,11 @@ export let members = [
       "name" : "Turboh",
       "image" : {         
         "sm": "/images/members/turboh.jpg",         
-        "sm2x" : "/images/members/turboh@2x.jpg"       
+        "sm2x" : "/images/members/turboh@2x.jpg",
+        "modal": {
+          "lg" : "/images/modal/turboh.jpg",
+          "lg2x" : "/images/modal/turboh@2x.jpg"
+        }       
       },
       "bio" : `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor erat a tortor gravida, eu pellentesque lacus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis finibus nisi, in fermentum libero. In hac habitasse platea dictumst. Phasellus vel purus ac dui hendrerit pretium. Morbi ante ligula, dignissim ac mauris non, pharetra tempor orci. Aliquam eget arcu dolor. Proin mattis dictum dui, non eleifend lorem. Suspendisse suscipit bibendum libero, in vehicula leo volutpat at. Duis a semper sapien, ut varius nisl. Maecenas a posuere urna. Nulla eget justo lectus. Duis a dignissim felis. Duis vulputate lobortis felis a molestie. Cras erat elit, feugiat a justo a, dictum tincidunt metus.</p>
 

@@ -4,7 +4,7 @@
       <h2 >Members</h2>
         <div class="row">
          <nuxt-link tag="div" :to="{name: 'members', params: {member} }" class="member-wrap col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center"  v-for="member in members" :key="member.name">
-            <div class="member dib overflow-hidden text-center pos-r" >
+            <div class="member full-width dib overflow-hidden text-center pos-r" >
               <img :src="member.image.sm" alt="" class="full-width height-auto">
               <span class="name pos-a text-white">{{member.name}}</span>
               <div class="bio pos-a full-width full-height flex">
@@ -34,7 +34,7 @@ export default {
   },
   methods:{
     updateMembers(){
-      var people = members.sort(function (a, b) {return Math.random() - 0.5;}).slice(0,8)
+      const people = members.sort(function (a, b) {return Math.random() - 0.5;}).slice(0,8)
       this.members = people
     }
   },
