@@ -24,7 +24,9 @@
       <modal v-show="showModal" @close="closeModal">
         <div slot="modalContent" class="modal">
           <div class="img-wrap pos-r full-width overflow-hidden">
-            <img v-if="modal.image && modal.image.modal.lg" :src="modal.image.modal.lg" class="full-width">
+            <transition name="fade">
+              <img v-show="modal.image && modal.image.modal.lg" :src="modal.image.modal.lg" :key="modalImage" class="full-width">
+            </transition>
             <h3 v-if="modal.name" class="name pos-a text-white">{{modal.name}}</h3>
           </div>
           <div v-if="modal.bio" class="bio" v-html="modal.bio"></div>
@@ -50,7 +52,6 @@ export default {
   },
   methods:{
     openModal: function(el){
-      console.log({el})
       this.modal = el
       this.showModal = true;
       document.body.classList.add('overflow-hidden')
@@ -93,6 +94,9 @@ export default {
      .img-wrap {
        background:black;
        max-height:400px;
+       img{
+         transition: 1s ease;
+       }
        .name {
          text-shadow:1px 1px 1px #000;
          top:40%;
@@ -169,4 +173,14 @@ export default {
     }
     }
   }
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 </style>
