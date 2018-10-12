@@ -53,7 +53,7 @@
   .modal-content{
     left:0;
     top:0;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .close-wrap {
     position: absolute;
