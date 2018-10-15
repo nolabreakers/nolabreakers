@@ -38,13 +38,6 @@
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <div class="input-wrap pos-r">
-                <div data-netlify-recaptcha></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
               <div class="input-wrap pos-r btn-wrap">
                 <button type="submit" class="btn">Send</button>
               </div>
