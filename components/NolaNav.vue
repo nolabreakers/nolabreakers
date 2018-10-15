@@ -11,6 +11,7 @@
              <!-- <a v-if="link.name == 'About'" href="/#about" v-scroll-to="`${link.to}`">{{link.name}}</a> -->
              <a v-if="$nuxt.$route.name == 'index' && link.name == 'About'" href="#" v-scroll-to="'#about'">{{link.name}}</a>
              <a v-else-if="link.name == 'About'" href="/#about"  @click="scrollToHash(link.to)">{{link.name}}</a>
+             <a v-else-if="link.name == 'Contact'" href="#bla" v-scroll-to="'#contact'">{{link.name}}</a>
               <nuxt-link v-else class="db" :to="link.to">{{link.name}}</nuxt-link>
             </li>
           </ul>
