@@ -33,14 +33,17 @@
         </div>
       </modal>
     </section>
+    <section-contact />
   </div>
 </template>
 <script>
 import {members} from '~/assets/js/members.js'
 import Modal from '~/components/Modal.vue'
+import SectionContact from '~/components/SectionContact'
 export default {
   components:{
-    Modal
+    Modal,
+    SectionContact
   },
   data() {
     return {

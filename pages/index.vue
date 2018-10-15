@@ -4,6 +4,7 @@
     <section-about  />
     <section-members />
     <section-media />
+    <section-contact />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import SectionHero from '~/components/SectionHero.vue'
 import SectionAbout from '~/components/SectionAbout.vue'
 import SectionMembers from '~/components/SectionMembers'
 import SectionMedia from '~/components/SectionMedia'
+import SectionContact from '~/components/SectionContact'
 
 export default {
   head(){
@@ -25,7 +27,8 @@ export default {
     SectionHero,
     SectionAbout,
     SectionMembers,
-    SectionMedia
+    SectionMedia,
+    SectionContact
   }
 }
 </script>

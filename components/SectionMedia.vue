@@ -90,6 +90,7 @@ export default {
     width:10%;
     left:calc(50% - 5%);
     top:30%;
+    pointer-events: none;
     @media screen and (min-width:600px){
     top:38%;
     }
@@ -138,10 +139,4 @@ export default {
     opacity: 0
   }
  }
-
-
-
-
-
-
 </style>

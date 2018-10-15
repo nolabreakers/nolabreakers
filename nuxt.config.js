@@ -25,7 +25,8 @@ module.exports = {
   ],
   plugins: [
     { src: '~/plugins/youtube.js', ssr: false },
-    { src: '~/plugins/vue-scrollto.js', ssr: false }
+    { src: '~/plugins/vue-scrollto.js', ssr: false },
+    { src: '~/plugins/vee-validate.js', ssr: true }
   ],
   /*
   ** Customize the progress bar color
