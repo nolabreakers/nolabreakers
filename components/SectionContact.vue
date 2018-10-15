@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="h1 text-center">Contact Us</h2>
       <div class="form-wrap">
-        <form id="form" action="" v-on:submit.prevent="validateForm" >
+        <form id="form" name="contact" method="POST" netlify v-on:submit.prevent="validateForm" >
           <div class="row between-xs">
             <div class="col-xs-12 col-md-6">
               <div class="input-wrap pos-r">
@@ -33,6 +33,13 @@
                 
                 <textarea type="text" id="message" placeholder="Message"  v-model="form.message"></textarea>
                 
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="input-wrap pos-r">
+                <div data-netlify-recaptcha></div>
               </div>
             </div>
           </div>
