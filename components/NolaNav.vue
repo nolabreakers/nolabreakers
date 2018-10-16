@@ -82,7 +82,6 @@ export default {
            padding: 0 1.3vw;
            text-shadow:1px 1px 1px #000;
            font-family: $font-3;
-           font-weight: 100;
          }
         }
       } 

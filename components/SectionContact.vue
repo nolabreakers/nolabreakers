@@ -3,7 +3,8 @@
     <div class="container">
       <h2 class="h1 text-center">Contact Us</h2>
       <div class="form-wrap">
-        <form id="form" name="contact" method="POST" netlify v-on:submit.prevent="validateForm" >
+        <form id="form" name="contact" netlify-honeypot="bot-field" method="POST"  v-on:submit.prevent="validateForm" action="" netlify>
+          <input type="hidden" name="form-name" value="contact" />
           <div class="row between-xs">
             <div class="col-xs-12 col-md-6">
               <div class="input-wrap pos-r">
@@ -30,9 +31,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="input-wrap pos-r ">
-                
-                <textarea type="text" id="message" placeholder="Message"  v-model="form.message"></textarea>
-                
+                <textarea type="text" id="message" name="message" placeholder="Message"  v-model="form.message"></textarea>
               </div>
             </div>
           </div>
@@ -44,6 +43,9 @@
               
             </div>
           </div>
+          <p class="hide">     
+            <label>Please fill this out: <input name="bot-field"></label>   
+          </p>
         </form>
       </div>
     </div>
