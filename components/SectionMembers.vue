@@ -114,6 +114,17 @@ export default {
               border-color:black;
               margin-top:1rem;
             }
+            @media screen and (max-width:1350px) and (min-width:1200px){
+              h4,p {
+                margin:0!important;
+              }
+              h4 {
+                font-size:1.8rem;
+              }
+              .btn {
+                margin-top:.5rem;
+              }
+            }
           }
            &:hover {
               filter: grayscale(0);

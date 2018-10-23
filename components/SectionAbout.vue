@@ -3,7 +3,7 @@
     <div class="container">
       <div class="text-wrap  pos-r">
         <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur augue sit amet ultricies volutpat. Vestibulum nec nisl vel nibh lacinia vulputate. Mauris pellentesque nibh a felis scelerisque aliquam. Cras molestie nisi dolor, nec gravida sem tempor eu. Proin et purus odio. Aliquam molestie, erat id laoreet mollis, lacus quam molestie ex, ut pulvinar dolor nibh eget nulla. Suspendisse potenti.</p>
+        <p>The Nola Breakers consist of a group of professional dancers that come from different dance backgrounds. The Nola Breakers started as competitive dancers. With years of experience they  gathered together to form a team of great versatility. Although, the Nola Breakers love the competing aspect, they’ve branched out to perform their craft in front of large audiences. Members of the Nola Breakers have appeared in Hollywood movies, to performing at NBA halftime shows.</p>
       </div>
     </div>
   </section>

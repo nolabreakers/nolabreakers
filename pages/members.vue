@@ -1,7 +1,7 @@
 <template>
   <div class="members-page">
     <section class='hero'>
-      <h2 class="text-center">Members</h2>
+      <h2 class="text-center">Meet the Nola Breakers</h2>
     </section>
     <section class="section-1">
       <div class="container">
@@ -159,6 +159,17 @@ export default {
           border:1px solid black;
           margin-top:1rem;
         }
+         @media screen and (max-width:1350px) and (min-width:1200px){
+           h4,p {
+             margin:0!important;
+           }
+          h4 {
+            font-size:1.8rem;
+          }
+          .btn {
+            margin-top:.5rem;
+          }
+        }
       }
       &:hover {
       filter: grayscale(0);
@@ -170,6 +181,7 @@ export default {
         }
       }
     }
+     
     }
   }
 
