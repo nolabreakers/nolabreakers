@@ -29,7 +29,14 @@
             </transition>
             <h3 v-if="modal.name" class="name pos-a text-white">{{modal.name}}</h3>
           </div>
-          <div v-if="modal.bio" class="bio" v-html="modal.bio"></div>
+          <div class="bio-wrap">
+            <div v-if="modal.bio" class="bio" v-html="modal.bio"></div>
+            <div v-if="modal.video" class="video-wrap">
+              <no-ssr>
+              <youtube :video-id="modal.video" @ready='videoReady' @playing="videoPlaying" @paused="stopVideo" @ended="stopVideo" :class="{playing: isPlaying}" class="video" :player-vars="{showInfo: 0}" />
+              </no-ssr>
+            </div>
+          </div>
         </div>
       </modal>
     </section>
@@ -50,7 +57,9 @@ export default {
       members: '',
       modal: {},
       showModal: false,
-      userId:''
+      userId:'',
+      player:'',
+      isPlaying: false
     }
   },
   methods:{
@@ -61,11 +70,29 @@ export default {
     },
     closeModal: function(){
       this.showModal = false
+      this.stopVideo()
       document.body.classList.remove('overflow-hidden')
     },
     updateMembers: function(){
       const people = members.sort(function (a, b) {return Math.random() - 0.5;})
       this.members = people
+    },
+    videoReady(event){
+      console.log('ready')
+      this.player = event.target
+    },
+    videoPlaying(){
+      this.isPlaying = true
+    },
+    playVideo(){
+      
+      this.player.playVideo()
+    }, 
+    stopVideo: function(){
+      this.isPlaying = false
+      if(this.modal.video){
+        this.player.pauseVideo()
+      }
     }
   },
   filters: {
@@ -85,7 +112,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
  .hero {
    background:black;
    padding:5rem 0;
@@ -102,88 +129,25 @@ export default {
          left:2rem;
        }
      }
-     .bio {
+     .bio-wrap {
        padding:2rem 2rem 4rem;
+     }
+     .video {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
      }
    }
  }
- .member-wrap{
-    margin-bottom:1rem;
-    .member {
-      cursor: pointer;
-      width:100%;
-      line-height: 0;
-      filter: grayscale(1);
-      transition: .3s ease;
-      .name{
-        letter-spacing: -30px;
-        left: -10px;
-        position: absolute;
-        color: rgba(255, 255, 255, 0.44);
-        bottom: 50px;
-        font-size: calc(8vh + 9vw);
-      }
-      .bio {
-        top: 14%;
-        top: 0;
-        left: 0;
-        line-height: 1.5;
-        background: white;
-        padding: 5%;
-        opacity:0;
-        transition: .5s ease;
-        color:black;
-        align-items: center;
-        padding: 1rem;
-        &:before {
-          content: '';
-          width: 100%;
-          height: 100%;
-          border: 3px solid white;
-          top: -2.5px;
-          left: -2.8px;
-          position: absolute;
-          transition: .5s ease;
-          transform: scale(1.5);
-          
-        }
-        h4 {
-          font-size:2rem;
-          margin-bottom:1rem;
-        }
-        p {
-          text-align: left;
-        }
-        .btn {
-          color:black;
-          border:1px solid black;
-          margin-top:1rem;
-        }
-         @media screen and (max-width:1350px) and (min-width:1200px){
-           h4,p {
-             margin:0!important;
-           }
-          h4 {
-            font-size:1.8rem;
-          }
-          .btn {
-            margin-top:.5rem;
-          }
-        }
-      }
-      &:hover {
-      filter: grayscale(0);
-      .bio {
-        opacity:0.9;
-        transform: scale(.9);
-        &:before{
-          transform: scale(1.05);
-        }
-      }
-    }
-     
-    }
-  }
+
 
 
 .fade-enter-active, .fade-leave-active {

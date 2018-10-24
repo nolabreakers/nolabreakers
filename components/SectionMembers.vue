@@ -18,7 +18,7 @@
          </nuxt-link>
         </div>
       <div class="text-center">
-        <nuxt-link to="/members" class="btn dib">View All Members</nuxt-link>
+        <nuxt-link to="/members" class="btn dib view-all">View All Members</nuxt-link>
       </div>
     </div>
   </section>
@@ -34,7 +34,7 @@ export default {
   },
   methods:{
     updateMembers(){
-      const people = members.sort(function (a, b) {return Math.random() - 0.5;}).slice(0,8)
+      const people = members.sort(function (a, b) {return Math.random() - 0.5;}).slice(0,4)
       this.members = people
     }
   },
@@ -57,106 +57,11 @@ export default {
     min-height:50vh;
     padding:8vh 0;
     .container {
-      
-     
       h2 {
        margin:4vh 0 8vh;
        text-align: center;
       }
-      .member-wrap{
-        margin-bottom:1rem;
-        .member {
-          line-height: 0;
-          filter: grayscale(1);
-          transition: .3s ease;
-          .name{
-            letter-spacing: -30px;
-            left: -10px;
-            position: absolute;
-            color: rgba(255, 255, 255, 0.44);
-            bottom: 50px;
-            font-size: calc(8vh + 9vw);
-          }
-            
-          .bio {
-            top: 14%;
-            top: 0;
-            left: 0;
-            line-height: 1.5;
-            background: white;
-            padding: 5%;
-            opacity:0;
-            transition: .5s ease;
-            color:black;
-            align-items: center;
-            padding: 1rem;
-            &:before {
-              content: '';
-              width: 100%;
-              height: 100%;
-              border: 3px solid white;
-              top: -2.5px;
-              left: -2.8px;
-              position: absolute;
-              transition: .5s ease;
-              transform: scale(1.5);
-              
-            }
-            h4 {
-              font-size:2rem;
-              margin-bottom:1rem;
-            }
-            p {
-              text-align: left;
-            }
-            .btn {
-              color:black;
-              border-color:black;
-              margin-top:1rem;
-            }
-            @media screen and (max-width:1350px) and (min-width:1200px){
-              h4,p {
-                margin:0!important;
-              }
-              h4 {
-                font-size:1.8rem;
-              }
-              .btn {
-                margin-top:.5rem;
-              }
-            }
-          }
-           &:hover {
-              filter: grayscale(0);
-              .bio {
-                opacity:0.9;
-                transform: scale(.9);
-                &:before{
-                  transform: scale(1.05);
-                }
-              }
-            }
-        }
-        @media screen and (max-width:1200px){
-          &:nth-child(7),
-          &:nth-child(8){
-            display: none;
-          }
-        }
-        @media screen and (max-width:1024px){
-          &:nth-child(5),
-          &:nth-child(6){
-            display: none;
-          }
-        }
-        @media screen and (max-width:767px){
-          &:nth-child(4) {
-            display: none;
-          }
-        }
-      }
- 
-      .btn {
+      .btn.view-all {
         color:white;
         border:1px solid white;
         margin-top:3rem;
