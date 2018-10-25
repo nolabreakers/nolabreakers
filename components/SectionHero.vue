@@ -3,7 +3,7 @@
     <div class="container pos-r">
       <h1><span>NoLa</span> <br> Breakers</h1>
       <p class="tagline">Some tag line thats cool...</p>
-      <a href="" class="btn dib">Learn More</a>
+      <a href="#" v-scroll-to="'#about'" class="btn dib">Learn More</a>
     </div>
   </div>
 </template>
@@ -15,9 +15,11 @@ export default {
 <style lang="scss" scoped>
 .hgroup {
    height:100vh;
-   background: black url(~/assets/images/index/hero-bg-black.jpg) no-repeat  bottom center;
+   background-color: #000;
+   background-position: bottom center;
+   background-repeat: no-repeat;
    background-size: cover;
- 
+   @include responBgImg('hero-bg-black-sm.jpg','hero-bg-black-sm@2x.jpg','hero-bg-black.jpg','hero-bg-black@2x.jpg');
    justify-content: center;
    &:before {
      content:'';

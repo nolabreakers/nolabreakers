@@ -1,7 +1,7 @@
 <template>
   <section  class="media text-center">
     <div class="container" >
-      <h2 id="media" class="h1 text-white">Media</h2>
+      <h2 id="media" class="text-white">Media</h2>
       <div class="row">
         <div class="col-xs-12 pos-r">
           <transition name="fade" key="play">
@@ -40,44 +40,86 @@ export default {
     return {
       player: ' ',
       videoId: 'iuFEzo5ydAo',
-      videoPoster: '/images/video/buku-1.jpg',
+      videoPoster: '',
       videos: [
-        {name:'1',id:'iuFEzo5ydAo', poster: '/images/video/buku-3.jpg' },
-        {name:'2',id:'ORgGaknmJeM',poster: '/images/video/buku-2.jpg' },
-        {name:'3',id:'V-wrZxYAZKk',poster: '/images/video/buku-1.jpg' },
+        {
+          name:'1',
+          id:'iuFEzo5ydAo', 
+          poster: {
+            sm: '/images/video/buku-3-sm.jpg',
+            sm2x: '/images/video/buku-3-sm@2x.jpg',
+            lg: '/images/video/buku-3.jpg',
+            lg2x: '/images/video/buku-3@2x.jpg'
+          } 
+         },
+        {
+          name:'2',
+          id:'ORgGaknmJeM',
+          poster: {
+            sm: '/images/video/buku-2-sm.jpg', 
+            sm2x: '/images/video/buku-2-sm@2x.jpg',
+            lg: '/images/video/buku-2.jpg',
+            lg2x: '/images/video/buku-2@2x.jpg' 
+          }
+        },
+        {
+          name:'3',
+          id:'V-wrZxYAZKk',
+          poster: { 
+            sm:'/images/video/buku-1-sm.jpg',
+            sm2x:'/images/video/buku-1-sm@2x.jpg',
+            lg: '/images/video/buku-1.jpg', 
+            lg2x: '/images/video/buku-1@2x.jpg'
+          }
+        },
         
       ],
       isPlaying: false
     }
   },
   methods: {
+    checkMatchMedia: function(){
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        if (window.matchMedia("(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)").matches){
+          return 'lg2x'
+        }
+        return 'lg'
+      } 
+      else if (window.matchMedia("(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)").matches) {
+        return 'sm2x'
+      } 
+      else {
+        return 'sm'
+      }
+    },
     changeVideo: function(vid){
-      this.videoId = vid.id;
-      this.videoPoster = vid.poster;
-      this.playVideo();
+      this.videoId = vid.id
+      this.videoPoster = vid.poster[`${this.checkMatchMedia()}`]
+      this.playVideo()
     },
     videoReady: function(event){
-      this.player = event.target;
+      this.player = event.target
     },
     videoPlaying: function(){
-      this.isPlaying = true;
+      this.isPlaying = true
     },
     playVideo: function(){
-      this.player.playVideo();
+      this.player.playVideo()
     }, 
     stopVideo: function(){
-      this.isPlaying = false;
-     this.player.pauseVideo();
+      this.isPlaying = false
+     this.player.pauseVideo()
     },
     preLoadImgs: function(){
       this.videos.forEach(video => {
-        (new Image()).src = video.poster;
+        (new Image()).src = video.poster[`${this.checkMatchMedia()}`]
       })
       
     }
   },
   beforeMount(){
     this.preLoadImgs()
+    this.videoPoster = this.videos[0].poster[`${this.checkMatchMedia()}`]
   }
   
 }
@@ -86,12 +128,18 @@ export default {
 .media {
   padding:8vh 0;
   background-image: linear-gradient(black 55%,black 1%,  white 45%);
+  @media screen and (max-width:600px){
+    padding: 4rem 0 0;
+  }
   .container {
     max-width:1400px;
   }
   h2 {
     margin: 0 0 8vh;
-  }
+    @media screen and (max-width:600px){
+          margin:0 0 3rem;
+        }
+    } 
    .svg-wrap {
     z-index:999;
     width:10%;

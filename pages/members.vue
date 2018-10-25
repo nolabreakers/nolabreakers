@@ -8,7 +8,10 @@
       <div class="row">
         <div class="member-wrap col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center"  v-for="member in members" :key="member.name">
             <div class="member dib overflow-hidden text-center pos-r" @click="openModal(member)">
-              <img :src="member.image.sm" alt="" class="full-width height-auto">
+              <picture class="dib full-width">
+                <source media="(min-width:768px)" :srcset="`${member.image.lg}, ${member.image.lg2x} 1.5x`" >
+                <img :src="member.image.sm" alt="" :srcset="`${member.image.sm2x} 1.5x`" class="full-width height-auto">
+              </picture>
               <span class="name pos-a text-white">{{member.name}}</span>
               <div class="bio pos-a full-width full-height flex">
                 <div class="bio-content">
@@ -119,6 +122,9 @@ export default {
  }
  .section-1 {
    padding:4rem 0;
+   @media screen and (max-width:992px){
+     padding:4rem 0 0;
+   }
    .modal {
      .img-wrap {
        height:400px;

@@ -69,9 +69,13 @@ export let members = [
   {
     "name" : "Jordan",
     "image" : {         
-      "sm": "/images/members/jordan.jpg",         
-      "sm2x" : "/images/members/jordan@2x.jpg",
+      "sm": "/images/members/jordan-sm.jpg",         
+      "sm2x" : "/images/members/jordan-sm@2x.jpg",
+      "lg" : "/images/members/jordan.jpg",
+      "lg2x" : "/images/members/jordan@2x.jpg",
       "modal": {
+        "sm": "/images/members/jordan-sm.jpg",         
+        "sm2x" : "/images/members/jordan-sm@2x.jpg",
         "lg" : "/images/modal/jordan.jpg",
         "lg2x" : "/images/modal/jordan@2x.jpg"
       }       

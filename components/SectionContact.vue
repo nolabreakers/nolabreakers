@@ -1,7 +1,7 @@
 <template>
   <section class="contact" id="contact">
     <div class="container">
-      <h2 class="h1 text-center">Contact Us</h2>
+      <h2 class="text-center">Contact Us</h2>
       <div class="form-wrap">
         <form id="form" name="contact" netlify-honeypot="bot-field" method="POST"  v-on:submit.prevent="validateForm" action="" netlify>
           <input type="hidden" name="form-name" value="contact" />
@@ -78,11 +78,20 @@ export default {
 <style lang="scss" scoped>
   .contact {
     padding: 8vh 0;
+    @media screen and (max-width:600px){
+      padding:4rem 0;
+    }
     h2{
       margin: 0 0 8vh;
+      @media screen and (max-width:600px){
+         margin:0 0 3rem;
+       }
     }
     .form-wrap {
       padding-top:2rem;
+      @media screen and (max-width:600px){
+        padding-top:0;
+      }
       form {
         max-width:900px;
         margin:0 auto;
@@ -113,6 +122,15 @@ export default {
           ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: black;
             font-weight: 300;
+          }
+          @media screen and (max-width:1023px){
+            margin-bottom:0;
+            &:nth-child(2) {
+              margin-bottom: 1rem;
+            }
+            .col-xs-12 {
+              margin-bottom: 2rem;
+            }
           }
         }
         .error {

@@ -16,9 +16,12 @@ export default {
 <style lang="scss" scoped>
  .about {
    min-height: 50vh;
-   background: black url(~/assets/images/index/about-bg.jpg) no-repeat center;
+   background-color: black;
+   background-repeat: no-repeat; 
+   background-position:center;
    background-attachment: fixed;
    background-size: cover;
+   @include responBgImg('about-bg-sm.jpg','about-bg-sm@2x.jpg','about-bg.jpg','about-bg@2x.jpg');
    padding:4rem 0;
    &::before {
      content:'';
@@ -36,7 +39,7 @@ export default {
       max-width:960px;
       margin: 0 auto;
       top:10%;
-      .h1{
+      h2{
         margin-bottom:2rem;
       }
       p{

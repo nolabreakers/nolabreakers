@@ -5,7 +5,10 @@
         <div class="row">
          <nuxt-link tag="div" :to="{name: 'members', params: {member} }" class="member-wrap col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center"  v-for="member in members" :key="member.name">
             <div class="member full-width dib overflow-hidden text-center pos-r" >
-              <img :src="member.image.sm" alt="" class="full-width height-auto">
+              <picture class="dib full-width">
+                <source media="(min-width:768px)" :srcset="`${member.image.lg}, ${member.image.lg2x} 1.5x`" >
+                <img :src="member.image.sm" alt="" :srcset="`${member.image.sm2x} 1.5x`" class="full-width height-auto">
+              </picture>
               <span class="name pos-a text-white">{{member.name}}</span>
               <div class="bio pos-a full-width full-height flex">
                 <div class="bio-content">
@@ -56,10 +59,16 @@ export default {
     color:white;
     min-height:50vh;
     padding:8vh 0;
+    @media screen and (max-width:600px){
+      padding:4rem 0;
+    }
     .container {
       h2 {
        margin:4vh 0 8vh;
        text-align: center;
+       @media screen and (max-width:600px){
+         margin:0 0 3rem;
+       }
       }
       .btn.view-all {
         color:white;

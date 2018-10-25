@@ -1,0 +1,24 @@
+@mixin responBgImg($sm,$sm2x,$lg,$lg2x) {
+  @if $sm {
+    @media screen and (max-width:767px){
+      background-image: url('~/assets/images/index/' + $sm);
+    }
+  }
+  @if $sm2x {
+    @media only screen and (max-width:767px) and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (min-device-pixel-ratio: 1.25) {
+     background-image: url('~/assets/images/index/' + $sm2x);
+   }
+  }
+  @if $lg {
+    @media screen and (min-width:768px){
+      background-image: url('~/assets/images/index/' + $lg);
+    }
+  }
+  @if $lg2x {
+    @media only screen and (min-width:768px) and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (min-device-pixel-ratio: 1.25) {
+      background-image: url('~/assets/images/index/' + $lg2x);
+    }
+  }
+}
