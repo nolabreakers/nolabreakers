@@ -11,7 +11,13 @@
           </transition>
           <div class="video-wrapper pos-r" :style="{backgroundImage: `url(${videoPoster})`}" @click="playVideo">
             <no-ssr>
-              <youtube :video-id="videoId" @ready='videoReady' @playing="videoPlaying" @paused="stopVideo" @ended="stopVideo" :class="{playing: isPlaying}" class="video" />
+              <youtube class="video"
+              :video-id="videoId" 
+              @ready="videoReady" 
+              @playing="videoPlaying" 
+              @paused="stopVideo" 
+              @ended="stopVideo" 
+              :class="{playing: isPlaying}" />
             </no-ssr>   
           </div>
           <ul class="video-thumbs ">
@@ -28,10 +34,11 @@
   </section>
 </template>
 <script>
+
 export default {
   data() {
     return {
-      player:'',
+      player: ' ',
       videoId: 'iuFEzo5ydAo',
       videoPoster: '/images/video/buku-1.jpg',
       videos: [
@@ -45,27 +52,27 @@ export default {
   },
   methods: {
     changeVideo: function(vid){
-      this.videoId = vid.id
-      this.videoPoster = vid.poster
-      this.playVideo()
+      this.videoId = vid.id;
+      this.videoPoster = vid.poster;
+      this.playVideo();
     },
-    videoReady(event){
-      this.player = event.target
+    videoReady: function(event){
+      this.player = event.target;
     },
-    videoPlaying(){
-      this.isPlaying = true
+    videoPlaying: function(){
+      this.isPlaying = true;
     },
-    playVideo(){
-      this.player.playVideo()
+    playVideo: function(){
+      this.player.playVideo();
     }, 
     stopVideo: function(){
-      this.isPlaying = false
-     this.player.pauseVideo()
+      this.isPlaying = false;
+     this.player.pauseVideo();
     },
     preLoadImgs: function(){
       this.videos.forEach(video => {
-        (new Image()).src = video.poster
-      });
+        (new Image()).src = video.poster;
+      })
       
     }
   },

@@ -16,13 +16,6 @@ import SectionMedia from '~/components/SectionMedia'
 import SectionContact from '~/components/SectionContact'
 
 export default {
-  head(){
-    return {
-      script: [
-        {src: 'https://www.youtube.com/iframe_api', defer: true}
-      ]
-    }
-  },
   components: {
     SectionHero,
     SectionAbout,

@@ -78,7 +78,6 @@ export default {
       this.members = people
     },
     videoReady(event){
-      console.log('ready')
       this.player = event.target
     },
     videoPlaying(){
