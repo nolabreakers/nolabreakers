@@ -1,7 +1,7 @@
 <template>
-  <section class="media text-center">
-    <div class="container">
-      <h2 class="h1 text-white">Media</h2>
+  <section  class="media text-center">
+    <div class="container" >
+      <h2 id="media" class="h1 text-white">Media</h2>
       <div class="row">
         <div class="col-xs-12 pos-r">
           <transition name="fade" key="play">
@@ -19,7 +19,7 @@
               <a class="db" @click="changeVideo(vid)">{{vid.name}}</a>
             </li>
           </ul>
-          <div>
+          <div class="hide">
             <nuxt-link to="/media" class="btn">View All Videos</nuxt-link>
           </div>
         </div>

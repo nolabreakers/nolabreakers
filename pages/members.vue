@@ -31,9 +31,9 @@
           </div>
           <div class="bio-wrap">
             <div v-if="modal.bio" class="bio" v-html="modal.bio"></div>
-            <div v-if="modal.video" class="video-wrap">
+            <div v-if="modal.video" class="video">
               <no-ssr>
-              <youtube :video-id="modal.video" @ready='videoReady' @playing="videoPlaying" @paused="stopVideo" @ended="stopVideo" :class="{playing: isPlaying}" class="video" :player-vars="{showInfo: 0}" />
+              <youtube :video-id="modal.video" @ready='videoReady' @playing="videoPlaying" @paused="stopVideo" @ended="stopVideo" :class="{playing: isPlaying}" class="video-wrapper" :player-vars="{showInfo: 0}" />
               </no-ssr>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" >
+<style lang="scss" scoped >
  .hero {
    background:black;
    padding:5rem 0;
@@ -131,34 +131,20 @@ export default {
      }
      .bio-wrap {
        padding:2rem 2rem 4rem;
-     }
-     .video {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        padding-top: 25px;
-        height: 0;
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+        .video {
+          max-width: 700px;
+          padding-top: .8rem;
         }
      }
    }
  }
-
-
-
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .25s;
 }
-
 .fade-enter-active {
   transition-delay: .25s;
 }
-
 .fade-enter, .fade-leave-active {
   opacity: 0
 }

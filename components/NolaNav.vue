@@ -8,10 +8,13 @@
         <div class="links dib">
           <ul class="dib">
             <li class="dib" v-for="link in navLinks" :key="link.name">
-             <!-- <a v-if="link.name == 'About'" href="/#about" v-scroll-to="`${link.to}`">{{link.name}}</a> -->
+             <!-- about link -->
              <a v-if="$nuxt.$route.name == 'index' && link.name == 'About'" href="#" v-scroll-to="'#about'">{{link.name}}</a>
              <a v-else-if="link.name == 'About'" href="/#about"  @click="scrollToHash(link.to)">{{link.name}}</a>
-             <a v-else-if="link.name == 'Contact'" href="#bla" v-scroll-to="'#contact'">{{link.name}}</a>
+             <!-- media link -->
+             <a v-else-if="$nuxt.$route.name == 'index' && link.name == 'Media'" href="#" v-scroll-to="'#media'">{{link.name}}</a>
+             <a v-else-if="link.name == 'Media'" href="/#media"  @click="scrollToHash(link.to)">{{link.name}}</a>
+             <a v-else-if="link.name == 'Contact'" href="#" v-scroll-to="'#contact'">{{link.name}}</a>
               <nuxt-link v-else class="db" :to="link.to">{{link.name}}</nuxt-link>
             </li>
           </ul>

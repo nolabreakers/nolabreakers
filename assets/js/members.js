@@ -2,9 +2,13 @@ export let members = [
   {
     "name" : "Monkey",
     "image" : {         
-      "sm": "/images/members/monkey.jpg",         
-      "sm2x" : "/images/members/monkey@2x.jpg",
+      "sm": "/images/members/monkey-sm.jpg",         
+      "sm2x" : "/images/members/monkey-sm@2x.jpg",
+      "lg" : "/images/members/monkey.jpg",
+      "lg2x" : "/images/members/monkey@2x.jpg",
       "modal": {
+        "sm": "/images/members/monkey-sm.jpg",         
+        "sm2x" : "/images/members/monkey-sm@2x.jpg",
         "lg" : "/images/modal/monkey.jpg",
         "lg2x" : "/images/modal/monkey@2x.jpg"
       }       
@@ -15,21 +19,30 @@ export let members = [
   {
     "name" : "RoboSteve",
     "image" : {         
-      "sm": "/images/members/robosteve.jpg",         
-      "sm2x" : "/images/members/robosteve@2x.jpg",
+      "sm": "/images/members/robosteve-sm.jpg",         
+      "sm2x" : "/images/members/robosteve-sm@2x.jpg",
+      "lg" : "/images/members/robosteve.jpg",
+      "lg2x" : "/images/members/robosteve@2x.jpg",
       "modal": {
+        "sm": "/images/members/robosteve-sm.jpg",         
+        "sm2x" : "/images/members/robosteve-sm@2x.jpg",
         "lg" : "/images/modal/robosteve.jpg",
         "lg2x" : "/images/modal/robosteve@2x.jpg"
       }       
     },
+    "video": "Koyt4JP3lwE",
     "bio" : `<p>Steven is basically a human robot who has an amazing ability to twist and bend his body in strange unnatural ways. With great musicality and his contortion style, Steven consistently leaves the audience in awe! He </p>`
   },
   {
     "name" : "Stress T.A.",
     "image" : {         
-      "sm": "/images/members/stress.jpg",         
-      "sm2x" : "/images/members/stress@2x.jpg",
+      "sm": "/images/members/stress-sm.jpg",         
+      "sm2x" : "/images/members/stress-sm@2x.jpg",
+      "lg" : "/images/members/stress.jpg",
+      "lg2x" : "/images/members/stress@2x.jpg",
       "modal": {
+        "sm": "/images/members/stress-sm.jpg",         
+        "sm2x" : "/images/members/stress-sm@2x.jpg",
         "lg" : "/images/modal/stress.jpg",
         "lg2x" : "/images/modal/stress@2x.jpg"
       }       
@@ -40,9 +53,13 @@ export let members = [
   {
     "name" : "Sykedelic",
     "image" : {         
-      "sm": "/images/members/sykedelic.jpg",         
-      "sm2x" : "/images/members/sykedelic@2x.jpg",
+      "sm": "/images/members/sykedelic-sm.jpg",         
+      "sm2x" : "/images/members/sykedelic-sm@2x.jpg",
+      "lg" : "/images/members/sykedelic.jpg",
+      "lg2x" : "/images/members/sykedelic@2x.jpg",
       "modal": {
+        "sm": "/images/members/sykedelic-sm.jpg",         
+        "sm2x" : "/images/members/sykedelic-sm@2x.jpg",
         "lg" : "/images/modal/sykedelic.jpg",
         "lg2x" : "/images/modal/sykedelic@2x.jpg"
       }       
