@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nola-nav />
+  <div >
+    <nola-nav  />
     <nuxt/>
     
   </div>

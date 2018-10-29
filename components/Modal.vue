@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
     display: table;
     transition: opacity .3s ease;
   
@@ -68,7 +68,7 @@
       line-height:2rem;
       border:1px solid;
       padding: 0 2rem;
-      font-weight:lighter;
+      font-weight:300;
       display:inline-block;
       text-shadow: 0.5px 0px 0px #000;
   }

@@ -28,7 +28,10 @@
         <div slot="modalContent" class="modal">
           <div class="img-wrap pos-r full-width overflow-hidden">
             <transition name="fade">
-              <img v-if="modal.image && modal.image.modal.lg" :src="modal.image.modal.lg" :key="modal.image.modal.lg" class="full-width">
+              <picture class="dib full-width" v-if="modal.image && modal.image.modal.lg">
+                <source media="(min-width:768px)" :srcset="`${modal.image.modal.lg}, ${modal.image.modal.lg2x} 1.5x`" >
+                <img :src="modal.image.modal.lg" :key="modal.image.modal.lg" alt="" :srcset="`${modal.image.sm2x} 1.5x`" class="full-width height-auto">
+              </picture>
             </transition>
             <h3 v-if="modal.name" class="name pos-a text-white">{{modal.name}}</h3>
           </div>
@@ -66,6 +69,26 @@ export default {
     }
   },
   methods:{
+    
+    checkMatchMedia: function(){
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        if (window.matchMedia("(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)").matches){
+          return 'lg2x'
+        }
+        return 'lg'
+      } 
+      else if (window.matchMedia("(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)").matches) {
+        return 'sm2x'
+      } 
+      else {
+        return 'sm'
+      }
+    },
+     preLoadImgs: function(){
+      this.members.forEach(member => {
+        (new Image()).src = member.image.modal[`${this.checkMatchMedia()}`]
+      })
+    },
     openModal: function(el){
       this.modal = el
       this.showModal = true;
@@ -87,7 +110,6 @@ export default {
       this.isPlaying = true
     },
     playVideo(){
-      
       this.player.playVideo()
     }, 
     stopVideo: function(){
@@ -111,6 +133,8 @@ export default {
   },
    beforeMount(){
     this.updateMembers()
+    this.preLoadImgs()
+
   }
 }
 </script>
@@ -127,7 +151,7 @@ export default {
    }
    .modal {
      .img-wrap {
-       height:400px;
+       max-height:400px;
        .name {
          text-shadow:1px 1px 1px #000;
          top:40%;

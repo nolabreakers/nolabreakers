@@ -2,7 +2,7 @@
   <div class="section hgroup pos-r flex align-items-center">
     <div class="container pos-r">
       <h1><span>NoLa</span> <br> Breakers</h1>
-      <p class="tagline">Some tag line thats cool...</p>
+      <p class="tagline">Yeah, we can do the worm...</p>
       <a href="#" v-scroll-to="'#about'" class="btn dib">Learn More</a>
     </div>
   </div>
